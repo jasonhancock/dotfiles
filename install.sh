@@ -8,6 +8,6 @@ for f in $FILES
 do
     if [ -f ~/$f ]; then
         rm $f
-        ln -s ~/development/dotfiles/$f
     fi
+    ln -s ~/development/dotfiles/$f
 done
