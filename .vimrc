@@ -9,6 +9,10 @@ set ignorecase          " Ignore case during searches
 highlight Tabs ctermbg=red guibg=red
 match Tabs /\t/
 
+" Highlight traling spaces in blue so they can be removed!
+highlight TrailingSpace ctermbg=blue guibg=blue
+match TrailingSpace /\s\+$/
+
 " turn off auto-commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
