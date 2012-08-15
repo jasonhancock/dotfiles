@@ -5,11 +5,6 @@ if [ -f /etc/bashrc ]; then
     . /etc/bashrc
 fi
 
-# Source site-specific definitions
-if [ -f ~/.bash_site ]; then
-    . ~/.bash_site
-fi
-
 alias synpp='puppet parser validate'
 synerb () {
     erb -x -T - "$@" | ruby -c
@@ -27,3 +22,8 @@ alias yum='sudo yum'
 ppgrep () {
     find . -name "*.pp" -exec grep "$@" -H {} \;
 }
+
+# Source site-specific definitions
+if [ -f ~/.bash_site ]; then
+    . ~/.bash_site
+fi
