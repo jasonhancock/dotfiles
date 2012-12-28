@@ -5,6 +5,8 @@ if [ -f /etc/bashrc ]; then
     . /etc/bashrc
 fi
 
+# http://blog.edwards-research.com/2010/07/keeping-aliases-with-sudo-sort-of/
+alias sudo='sudo '
 alias synpp='puppet parser validate'
 synerb () {
     erb -x -T - "$@" | ruby -c
