@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILES=".bash_profile .bashrc .gvimrc .vimrc"
+FILES=".bash_profile .bashrc .gvimrc .vimrc .rpmmacros"
 
 cd ~
 
