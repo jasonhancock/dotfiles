@@ -5,6 +5,8 @@ if [ -f /etc/bashrc ]; then
     . /etc/bashrc
 fi
 
+alias ll='ls -l'
+
 # http://blog.edwards-research.com/2010/07/keeping-aliases-with-sudo-sort-of/
 alias sudo='sudo '
 alias synpp='puppet parser validate'
@@ -13,8 +15,13 @@ synerb () {
 }
 alias puppet-lint='puppet-lint --with-filename'
 
-DISTRIB=`lsb_release -i | awk '{ print $3 }'`
-RELEASE=`lsb_release -r | awk '{ print $2 }'`
+if hash lsb_release 2>/dev/null; then
+    DISTRIB=`lsb_release -i | awk '{ print $3 }'`
+    RELEASE=`lsb_release -r | awk '{ print $2 }'`
+else
+    DISTRIB='Mac OS X'
+    RELEASE=`sw_vers | grep ProductVersion | awk '{print $2}'`
+fi
 
 export PS1='\033[46m\033[30m $DISTRIB $RELEASE $(date +%H:%M:%S) \033[m\033[m \n[\u \w]\n\$ '
 
