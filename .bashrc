@@ -36,6 +36,11 @@ ppgrep () {
     find . -name "*.pp" -exec grep "$@" -H {} \;
 }
 
+# Shortcut for setting terminal title
+title() {
+    echo -ne "\\033]0;$@\\007"
+}
+
 # Source site-specific definitions
 if [ -f ~/.bash_site ]; then
     . ~/.bash_site
