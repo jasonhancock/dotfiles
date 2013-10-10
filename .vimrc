@@ -4,6 +4,7 @@ set sw=4                " (shiftwidth) Auto-indent uses 4 spaces (default is 8)
 set nowrapscan          " Don't search from the top if end-of-file is reached
 set smartcase           " Smartcase: ignore case except when upper case is typed
 set ignorecase          " Ignore case during searches
+set hlsearch
 
 " Highlight tabs in red so they can be removed!
 highlight Tabs ctermbg=red guibg=red
