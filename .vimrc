@@ -6,6 +6,9 @@ set smartcase           " Smartcase: ignore case except when upper case is typed
 set ignorecase          " Ignore case during searches
 set hlsearch
 
+" Enable syntax highlighting
+syntax on
+
 " Highlight tabs in red so they can be removed!
 highlight Tabs ctermbg=red guibg=red
 match Tabs /\t/
