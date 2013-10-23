@@ -5,6 +5,7 @@ set nowrapscan          " Don't search from the top if end-of-file is reached
 set smartcase           " Smartcase: ignore case except when upper case is typed
 set ignorecase          " Ignore case during searches
 set hlsearch
+set ruler
 
 " Enable syntax highlighting
 syntax on
