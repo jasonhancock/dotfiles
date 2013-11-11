@@ -25,6 +25,10 @@ elif [[ "`uname`" == 'FreeBSD' ]]; then
 else
     DISTRIB='Mac OS X'
     RELEASE=`sw_vers | grep ProductVersion | awk '{print $2}'`
+
+    # highlight the current day in cal's output
+    # http://www.commandlinefu.com/commands/view/10933/print-a-monthly-calendar-with-todays-date-highlighted
+    alias 'jcal'='cal | grep -E --color "\b`date +%e`\b|$"'
 fi
 
 export PS1='\033[46m\033[30m $DISTRIB $RELEASE $(date +%H:%M:%S) \033[m\033[m \n[\u \w]\n\$ '
