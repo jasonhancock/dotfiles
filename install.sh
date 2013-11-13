@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILES=".bash_profile .bashrc .gvimrc .vimrc .rpmmacros"
+FILES=".bash_profile .bashrc .gvimrc .vimrc .rpmmacros .vagrant.d/Vagrantfile .vagrant.d/bootstrap.sh"
 
 cd ~
 
@@ -9,5 +9,5 @@ do
     if [ -f ~/$f ]; then
         rm $f
     fi
-    ln -s ~/development/dotfiles/$f
+    ln -s ~/development/dotfiles/$f ~/$f
 done
