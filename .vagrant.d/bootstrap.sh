@@ -26,11 +26,6 @@ case "$DISTRIB" in
         ;;
 esac
 
-# TODO: update to support other distros
-export DEBIAN_FRONTEND=noninteractive
-apt-get update > /dev/null
-apt-get -y install vim
-
 su -c /home/vagrant/development/dotfiles/install.sh vagrant
 
 PROJECT=$1
