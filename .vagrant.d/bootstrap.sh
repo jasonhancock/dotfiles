@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+if [ -f /etc/centos-release ];
+then
+    # temporary workaround until i rebuild my vagrant box to inlude redhat-release
+    yum -y install redhat-lsb
+fi
+
+
 if hash lsb_release 2>/dev/null; then
     DISTRIB=`lsb_release -i | awk '{ print $3 }'`
     RELEASE=`lsb_release -r | awk '{ print $2 }'`
