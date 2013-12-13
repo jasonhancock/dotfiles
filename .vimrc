@@ -16,7 +16,7 @@ match Tabs /\t/
 
 " Highlight traling spaces in blue so they can be removed!
 highlight TrailingSpace ctermbg=blue guibg=blue
-match TrailingSpace /\s\+$/
+2match TrailingSpace /\s\+$/
 
 " turn off auto-commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
