@@ -22,6 +22,9 @@ if hash lsb_release 2>/dev/null; then
 elif [[ "`uname`" == 'FreeBSD' ]]; then
     DISTRIB='FreeBSD'
     RELEASE=''
+elif [[ -f "/etc/debian_version" ]]; then
+    DISTRIB='Debian'
+    RELEASE=`cat /etc/debian_version`
 else
     DISTRIB='Mac OS X'
     RELEASE=`sw_vers | grep ProductVersion | awk '{print $2}'`
