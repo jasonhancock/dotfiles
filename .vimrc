@@ -26,3 +26,14 @@ autocmd FileType puppet setlocal sw=2 ts=2
 
 " Turn off expandtab for Makefiles
 autocmd FileType make setlocal noexpandtab
+
+set viminfo='20,\"50    " read/write a .viminfo file, don't store more
+                        " than 50 lines of registers
+
+" Uncomment the following to have Vim jump to the last position when
+" reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
+endif
+
