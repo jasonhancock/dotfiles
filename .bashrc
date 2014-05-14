@@ -34,7 +34,7 @@ else
     alias 'jcal'='cal | grep -E --color "\b`date +%e`\b|$"'
 fi
 
-export PS1='\033[46m\033[30m $DISTRIB $RELEASE $(date +%H:%M:%S) \033[m\033[m \n[\u \w]\n\$ '
+export PS1='\033[46m\033[30m $HOSTNAME $DISTRIB $RELEASE $(date +%H:%M:%S) \033[m\033[m \n[\u \w]\n\$ '
 
 alias yum='sudo yum'
 
