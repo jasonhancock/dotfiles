@@ -24,6 +24,8 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " Use 2 spaces instead of 4 for puppet files per the style guide
 autocmd FileType puppet setlocal sw=2 ts=2
 
+autocmd FileType yaml setlocal sw=2 ts=2
+
 " Turn off expandtab for Makefiles
 autocmd FileType make setlocal noexpandtab
 
@@ -37,3 +39,5 @@ if has("autocmd")
     \| exe "normal! g'\"" | endif
 endif
 
+" Have vim detect *.md files as markdown
+au BufRead,BufNewFile *.md set filetype=markdown
