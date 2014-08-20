@@ -52,3 +52,5 @@ title() {
 if [ -f ~/.bash_site ]; then
     . ~/.bash_site
 fi
+
+export EDITOR=vim
