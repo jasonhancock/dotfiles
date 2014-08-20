@@ -41,3 +41,4 @@ endif
 
 " Have vim detect *.md files as markdown
 au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.tt set filetype=html
