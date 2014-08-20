@@ -23,10 +23,11 @@ case "$DISTRIB" in
     Ubuntu)
         export DEBIAN_FRONTEND=noninteractive
         apt-get update > /dev/null
-        apt-get -y install vim
+        apt-get -y install vim dos2unix
+        apt-get -y remove command-not-found
         ;;
     CentOS)
-        yum -y install vim-enhanced
+        yum -y install vim-enhanced dos2unix
         ;;
     *)
         echo "Unknown disto $DISTRIB" 1>&2
