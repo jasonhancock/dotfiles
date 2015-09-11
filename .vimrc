@@ -44,3 +44,6 @@ au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.tt set filetype=html
 au BufRead,BufNewFile *.ino set filetype=cpp
 au BufRead,BufNewFile *.sls set filetype=yaml
+
+" Enable spellchecking for markdown docs
+autocmd BufRead,BufNewFile *.md setlocal spell

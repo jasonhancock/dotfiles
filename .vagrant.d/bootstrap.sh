@@ -20,7 +20,7 @@ else
 fi
 
 case "$DISTRIB" in
-    Ubuntu)
+    Ubuntu | Debian)
         export DEBIAN_FRONTEND=noninteractive
         apt-get update > /dev/null
         apt-get -y install vim dos2unix
