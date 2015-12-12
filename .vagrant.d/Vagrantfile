@@ -7,4 +7,8 @@ VAGRANTFILE_API_VERSION_ = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION_) do |config|
   config.vm.provision :shell, :path => File.join(File.dirname(__FILE__), "bootstrap.sh") , :args => File.basename(Dir.pwd)
   config.vm.synced_folder File.expand_path("~/development/dotfiles"), "/home/vagrant/development/dotfiles", :mount_options => ["ro"]
+
+  if File.directory?(ENV['HOME']+ '/.vim')
+    config.vm.synced_folder ENV['HOME'] +"/.vim", "/home/vagrant/.vim"
+  end
 end

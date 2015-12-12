@@ -7,8 +7,12 @@ set ignorecase          " Ignore case during searches
 set hlsearch
 set ruler
 
+execute pathogen#infect()
+
 " Enable syntax highlighting
 syntax on
+
+filetype plugin indent on
 
 " Highlight tabs in red so they can be removed!
 highlight Tabs ctermbg=red guibg=red
@@ -44,6 +48,9 @@ au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.tt set filetype=html
 au BufRead,BufNewFile *.ino set filetype=cpp
 au BufRead,BufNewFile *.sls set filetype=yaml
+au BufRead,BufNewFile *.pp set filetype=puppet
 
 " Enable spellchecking for markdown docs
 autocmd BufRead,BufNewFile *.md setlocal spell
+
+autocmd FileType go match
