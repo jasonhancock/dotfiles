@@ -34,6 +34,8 @@ else
     alias 'jcal'='cal | grep -E --color "\b`date +%e`\b|$"'
 fi
 
+# yellow
+# export PS1='\033[43m\033[30m $HOSTNAME $DISTRIB $RELEASE $(date +%H:%M:%S) \033[m\033[m \n[\u \w]\n\$ '
 export PS1='\033[46m\033[30m $HOSTNAME $DISTRIB $RELEASE $(date +%H:%M:%S) \033[m\033[m \n[\u \w]\n\$ '
 
 alias yum='sudo yum'
@@ -46,6 +48,14 @@ ppgrep () {
 # Shortcut for setting terminal title
 title() {
     echo -ne "\\033]0;$@\\007"
+}
+
+enc() {
+    /opt/puppetlabs/puppet/bin/eyaml encrypt -l "$1" -s "$2"
+}
+
+enc_prod() {
+    /opt/puppetlabs/puppet/bin/eyaml encrypt --pkcs7-public-key=/vagrant/keys/production.public_key.pkcs7.pem -l "$1" -s "$2"
 }
 
 # Source site-specific definitions

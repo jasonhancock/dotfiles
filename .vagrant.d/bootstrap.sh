@@ -3,6 +3,7 @@
 if [ -f /etc/centos-release ];
 then
     # temporary workaround until i rebuild my vagrant box to inlude redhat-release
+    yum clean all
     yum -y install redhat-lsb
 fi
 
@@ -23,11 +24,11 @@ case "$DISTRIB" in
     Ubuntu | Debian)
         export DEBIAN_FRONTEND=noninteractive
         apt-get update > /dev/null
-        apt-get -y install vim dos2unix
+        apt-get -y install vim dos2unix mlocate
         apt-get -y remove command-not-found
         ;;
     CentOS)
-        yum -y install vim-enhanced dos2unix
+        yum -y install vim-enhanced dos2unix mlocate
         ;;
     *)
         echo "Unknown disto $DISTRIB" 1>&2

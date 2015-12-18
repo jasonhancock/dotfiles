@@ -6,6 +6,7 @@ set smartcase           " Smartcase: ignore case except when upper case is typed
 set ignorecase          " Ignore case during searches
 set hlsearch
 set ruler
+set background=dark
 
 execute pathogen#infect()
 
