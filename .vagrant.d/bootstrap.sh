@@ -36,6 +36,9 @@ case "$DISTRIB" in
 esac
 
 su -c /home/vagrant/development/dotfiles/install.sh vagrant
+unlink /home/vagrant/.rpmmacros
+cp /home/vagrant/development/dotfiles/.rpmmacros /home/vagrant/.rpmmacros
+sed -i 's/jhancock/vagrant/' /home/vagrant/.rpmmacros
 
 PROJECT=$1
 COLOR_FG=44
