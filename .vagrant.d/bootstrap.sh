@@ -2,9 +2,8 @@
 
 if [ -f /etc/centos-release ];
 then
-    # temporary workaround until i rebuild my vagrant box to inlude redhat-release
     yum clean all
-    yum -y install redhat-lsb
+    yum -y install redhat-lsb-core
 fi
 
 
