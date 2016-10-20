@@ -28,6 +28,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Use 2 spaces instead of 4 for puppet files per the style guide
 autocmd FileType puppet setlocal sw=2 ts=2
+autocmd FileType html setlocal sw=2 ts=2
 
 autocmd FileType yaml setlocal sw=2 ts=2
 
@@ -55,3 +56,5 @@ au BufRead,BufNewFile *.pp set filetype=puppet
 autocmd BufRead,BufNewFile *.md setlocal spell
 
 autocmd FileType go match
+
+au BufRead,BufNewFile Vagrantfile set filetype=ruby

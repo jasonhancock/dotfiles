@@ -58,9 +58,19 @@ enc_prod() {
     /opt/puppetlabs/puppet/bin/eyaml encrypt --pkcs7-public-key=/vagrant/keys/production.public_key.pkcs7.pem -l "$1" -s "$2"
 }
 
+# Strips the last char of a file. Useful for removing newlines
+strip_newline () {
+  local src=$1
+  local tmpfile='/tmp/stripping_newline'
+  perl -pe 'chomp if eof' $src > $tmpfile
+  mv $tmpfile $src
+}
+
 # Source site-specific definitions
 if [ -f ~/.bash_site ]; then
     . ~/.bash_site
 fi
 
 export EDITOR=vim
+
+alias gs='git status'
