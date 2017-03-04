@@ -74,3 +74,11 @@ fi
 export EDITOR=vim
 
 alias gs='git status'
+
+batt() {
+    pmset -g batt | tail -n 1 | awk '{print $3}' | cut -d ';' -f 1
+}
+
+strip_last_newline() {
+    perl -pi -e 'chomp if eof' "$1"
+}
