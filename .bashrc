@@ -25,6 +25,9 @@ elif [[ "`uname`" == 'FreeBSD' ]]; then
 elif [[ -f "/etc/debian_version" ]]; then
     DISTRIB='Debian'
     RELEASE=`cat /etc/debian_version`
+elif [[ -f "/etc/centos-release" ]]; then
+    DISTRIB='CentOS'
+    RELEASE=`grep ^VERSION= /etc/os-release | cut -d '"' -f 2`
 else
     DISTRIB='Mac OS X'
     RELEASE=`sw_vers | grep ProductVersion | awk '{print $2}'`
@@ -39,6 +42,8 @@ fi
 export PS1='\033[46m\033[30m $HOSTNAME $DISTRIB $RELEASE $(date +%H:%M:%S) \033[m\033[m \n[\u \w]\n\$ '
 
 alias yum='sudo yum'
+alias weather='curl wttr.in/ONT?u && echo && echo'
+alias moon='curl wttr.in/Moon'
 
 # grep .pp files under cwd
 ppgrep () {
