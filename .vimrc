@@ -7,6 +7,7 @@ set ignorecase          " Ignore case during searches
 set hlsearch
 set ruler
 set background=dark
+"set noswapfile
 
 execute pathogen#infect()
 
@@ -29,11 +30,15 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " Use 2 spaces instead of 4 for puppet files per the style guide
 autocmd FileType puppet setlocal sw=2 ts=2
 autocmd FileType html setlocal sw=2 ts=2
+autocmd FileType css setlocal sw=2 ts=2
 
 autocmd FileType yaml setlocal sw=2 ts=2
 
 " Turn off expandtab for Makefiles
 autocmd FileType make setlocal noexpandtab
+autocmd FileType *.tag setlocal noexpandtab
+autocmd FileType javascript setlocal noexpandtab
+"autocmd FileType html setlocal noexpandtab
 
 set viminfo='20,\"50    " read/write a .viminfo file, don't store more
                         " than 50 lines of registers

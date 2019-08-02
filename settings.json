@@ -1,0 +1,24 @@
+{
+    "vim.disableAnnoyingNeovimMessage": true,
+    "window.zoomLevel": 0,
+    "todohighlight.keywords": [
+        "DEBUG:",
+        "REVIEW:",
+        {
+            "text": "TODO",
+            "color": "#000",
+            "isWholeLine": false,
+        },
+        {
+            "text": "FIXME",
+            "color": "#000",
+            "isWholeLine": false,
+        }
+    ],
+    "telemetry.enableTelemetry": false,
+    "extensions.ignoreRecommendations": false,
+    "files.insertFinalNewline": true,
+    "editor.insertSpaces": true,
+    "editor.rulers": [140],
+    "workbench.colorTheme": "Visual Studio Dark",
+}

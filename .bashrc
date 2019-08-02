@@ -87,3 +87,5 @@ batt() {
 strip_last_newline() {
     perl -pi -e 'chomp if eof' "$1"
 }
+
+alias recentbranches="git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) - (%(color:green)%(committerdate:relative)%(color:reset))' --count 10"
