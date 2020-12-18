@@ -89,6 +89,7 @@ strip_last_newline() {
 }
 
 alias recentbranches="git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) - (%(color:green)%(committerdate:relative)%(color:reset))' --count 10"
+alias fix_author='git commit --amend --author="Jason Hancock <jason@jasonhancock.com>"'
 
 # install github.com/rakyll/gotest
 alias gt='gotest -v -tags=int'
@@ -109,4 +110,3 @@ function check_ssl() {
 
     echo | openssl s_client -servername $host -connect $host:$port 2>/dev/null | openssl x509 -noout -enddate
 }
-
