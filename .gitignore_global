@@ -1,2 +1,4 @@
 .vscode
 /internal/jasonhancock
+.vagrant
+.DS_Store

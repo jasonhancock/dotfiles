@@ -23,11 +23,11 @@ case "$DISTRIB" in
     Ubuntu | Debian)
         export DEBIAN_FRONTEND=noninteractive
         apt-get update > /dev/null
-        apt-get -y install vim dos2unix mlocate
+        apt-get -y install vim dos2unix mlocate git
         apt-get -y remove command-not-found
         ;;
     CentOS)
-        yum -y install vim-enhanced dos2unix mlocate
+        yum -y install vim-enhanced dos2unix mlocate git
         ;;
     *)
         echo "Unknown disto $DISTRIB" 1>&2

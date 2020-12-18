@@ -21,4 +21,5 @@
     "editor.insertSpaces": true,
     "editor.rulers": [140],
     "workbench.colorTheme": "Visual Studio Dark",
+    "go.useLanguageServer": true,
 }
