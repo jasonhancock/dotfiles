@@ -110,3 +110,5 @@ function check_ssl() {
 
     echo | openssl s_client -servername $host -connect $host:$port 2>/dev/null | openssl x509 -noout -enddate
 }
+
+alias vim_spell_update="vim -c ':mkspell! ~/.vim/spell/en.utf-8.add' -c ':q!'"

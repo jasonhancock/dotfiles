@@ -1,7 +1,7 @@
 #!/bin/bash
 
 UNAME=$(uname)
-FILES=".bash_profile .bashrc .gvimrc .vimrc .rpmmacros .vagrant.d/Vagrantfile .vagrant.d/bootstrap.sh .composer/auth.json"
+FILES=".bash_profile .bashrc .gvimrc .vimrc .rpmmacros .vagrant.d/Vagrantfile .vagrant.d/bootstrap.sh .composer/auth.json .vim/spell/en.utf-8.add"
 
 cd ~
 
@@ -33,4 +33,3 @@ if [ "$UNAME" == "Darwin" ]; then
   mkdir -p "$D"
   ln -s $HOME/development/dotfiles/settings.json "$D/settings.json"
 fi
-
