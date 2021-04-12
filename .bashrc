@@ -112,3 +112,10 @@ function check_ssl() {
 }
 
 alias vim_spell_update="vim -c ':mkspell! ~/.vim/spell/en.utf-8.add' -c ':q!'"
+
+# full logs from Docker's BuildKit
+export BUILDKIT_PROGRESS=plain
+
+# from https://twitter.com/fatih/status/1381555413083168769
+# cd to the root of a git repo from within the repo
+alias cdr="cd $(git rev-parse --show-toplevel)"
