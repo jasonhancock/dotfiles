@@ -1,6 +1,8 @@
+alertmanager
 approle
 artifactory
 auth
+bool
 fqdn
 github
 hostname
