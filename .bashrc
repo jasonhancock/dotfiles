@@ -120,4 +120,4 @@ export BUILDKIT_PROGRESS=plain
 
 # from https://twitter.com/fatih/status/1381555413083168769
 # cd to the root of a git repo from within the repo
-alias cdr="cd $(git rev-parse --show-toplevel)"
+alias cdr='cd $(git rev-parse --show-toplevel)'
