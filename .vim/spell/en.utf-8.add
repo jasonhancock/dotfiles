@@ -15,6 +15,7 @@ knodes
 kube
 kubeconfig
 kubelet
+nginx
 nonprod
 tbd
 webhook
