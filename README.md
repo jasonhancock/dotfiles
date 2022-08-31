@@ -15,3 +15,4 @@ To install, check the files out to ~/development/dotfiles then run
 * https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint
 * https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer
 * https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight
+* https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens
