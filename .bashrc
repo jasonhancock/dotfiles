@@ -92,7 +92,7 @@ alias recentbranches="git for-each-ref --sort=-committerdate refs/heads/ --forma
 alias fix_author='git commit --amend --author="Jason Hancock <jason@jasonhancock.com>"'
 
 # install github.com/rakyll/gotest
-alias gt='gotest -v -tags=int'
+alias gt='gotest -v'
 
 function check_ssl() {
     local host=$1
