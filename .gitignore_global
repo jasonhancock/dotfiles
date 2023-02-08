@@ -2,3 +2,4 @@
 /internal/jasonhancock
 .vagrant
 .DS_Store
+[._]*.sw[a-p]
