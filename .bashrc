@@ -108,7 +108,7 @@ function check_ssl() {
         return
     fi
 
-    echo | openssl s_client -servername $host -connect $host:$port 2>/dev/null | openssl x509 -noout -enddate
+    echo | openssl s_client -servername $host -connect $host:$port 2>/dev/null | openssl x509 -noout -text
 }
 
 export HISTCONTROL=ignorespace
@@ -134,3 +134,4 @@ export BUILDKIT_PROGRESS=plain
 # from https://twitter.com/fatih/status/1381555413083168769
 # cd to the root of a git repo from within the repo
 alias cdr='cd $(git rev-parse --show-toplevel)'
+. "$HOME/.cargo/env"
