@@ -1,7 +1,7 @@
 #!/bin/bash
 
 UNAME=$(uname)
-FILES=".bash_profile .bashrc .gvimrc .vimrc .rpmmacros .vagrant.d/Vagrantfile .vagrant.d/bootstrap.sh .composer/auth.json .vim/spell/en.utf-8.add"
+FILES=".bash_profile .bashrc .gvimrc .vimrc .rpmmacros .vagrant.d/Vagrantfile .vagrant.d/bootstrap.sh .composer/auth.json .vim/spell/en.utf-8.add .vim/after/indent/yaml.vim .sqliterc"
 
 cd ~
 
