@@ -16,3 +16,9 @@ To install, check the files out to ~/development/dotfiles then run
 * https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer
 * https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight
 * https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens
+
+To get Vim mode to repeat keystrokes when holding down a key, run:
+
+```none
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+```
