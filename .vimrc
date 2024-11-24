@@ -9,7 +9,7 @@ set ruler
 set background=dark
 "set noswapfile
 
-execute pathogen#infect()
+"execute pathogen#infect()
 
 " Enable syntax highlighting
 syntax on
