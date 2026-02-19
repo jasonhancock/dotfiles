@@ -29,8 +29,8 @@ elif [[ -f "/etc/centos-release" ]]; then
     DISTRIB='CentOS'
     RELEASE=`grep ^VERSION= /etc/os-release | cut -d '"' -f 2`
 else
-    DISTRIB='Mac OS X'
-    RELEASE=`sw_vers | grep ProductVersion | awk '{print $2}'`
+    DISTRIB='MacOS'
+    RELEASE=`sw_vers | grep ProductVersion | head -n 1 | awk '{print $2}'`
 
     # highlight the current day in cal's output
     # http://www.commandlinefu.com/commands/view/10933/print-a-monthly-calendar-with-todays-date-highlighted
@@ -135,3 +135,8 @@ export BUILDKIT_PROGRESS=plain
 # cd to the root of a git repo from within the repo
 alias cdr='cd $(git rev-parse --show-toplevel)'
 . "$HOME/.cargo/env"
+
+
+alias wifi_signal_strength='while x=1; do /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | grep CtlRSSI; sleep 0.5; done'
+
+alias jsfmt='prettier --write'
